@@ -26,4 +26,4 @@ set -u
 # Print commands
 set -x
 
-./prow/e2e-suite --auth-enable --default_proxy
+./prow/e2e-suite.sh --auth-enable --default_proxy
