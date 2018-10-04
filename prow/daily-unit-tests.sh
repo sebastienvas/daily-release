@@ -49,5 +49,7 @@ echo 'Running Unit Tests'
 # Integration/e2e tests in the other scripts are run against GKE or real clusters.
 JUNIT_UNIT_TEST_XML="${ARTIFACTS_DIR}/junit_unit-tests.xml" \
 T="-v" \
+
+export KUBECONFIG=${GOPATH}/src/istio.io/istio/.circleci/config 
 make build localTestEnv test
 
